@@ -1,0 +1,6 @@
+<launch>
+        <node name="interaction_generator" pkg="CR_week6_test" type="interaction_generator.py"/>
+        <node name="perception_filter" pkg="CR_week6_test" type="perception_filter.py"/>
+        <node name="robot_controller" pkg="CR_week6_test" type="robot_controller.py"/>
+        <node name="robot_expression_prediction" pkg="CR_week6_test" type="robot_expression_prediction.py"/>
+</launch>	

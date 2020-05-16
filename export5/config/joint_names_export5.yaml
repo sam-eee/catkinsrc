@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'Thumb_J1_palm', 'Thumb_J2_AA', 'Thumb_J3_FE1', 'Thumb_J3_FE2', 'Index_J1_FE', 'Index_J2_FE', 'Index_J3_FE', 'Middle_J1_FE', 'Middle_J2_FE', 'Middle_J3_FE', 'Ring_J1_FE', 'Ring_J2_FE', 'Ring_J3_FE', 'Little_J1_FE', 'Little_J2_FE', 'Little_J3_FE', ]

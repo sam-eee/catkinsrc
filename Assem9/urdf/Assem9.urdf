@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem9">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0784181346772834 0.0216865354845923 0.0519080506276422"
+        rpy="0 0 0" />
+      <mass
+        value="0.123509016850579" />
+      <inertia
+        ixx="8.88237314481654E-05"
+        ixy="9.11796897240884E-06"
+        ixz="8.07416451670103E-07"
+        iyy="7.06141777765002E-05"
+        iyz="-7.27332787833695E-07"
+        izz="0.000156863448812758" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem9/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem9/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="INDEX">
+    <inertial>
+      <origin
+        xyz="-0.0144326627089809 0.0542536671695487 -0.018111878088184"
+        rpy="0 0 0" />
+      <mass
+        value="0.0234263003223455" />
+      <inertia
+        ixx="2.27491816288172E-06"
+        ixy="-6.33121394937988E-09"
+        ixz="-7.9283804988921E-09"
+        iyy="1.15909780545131E-06"
+        iyz="3.85037852710387E-07"
+        izz="2.1413945038986E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem9/meshes/INDEX.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem9/meshes/INDEX.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="inde1"
+    type="continuous">
+    <origin
+      xyz="-0.071883 -0.053892 0.09301"
+      rpy="1.97 -0.65797 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="INDEX" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>

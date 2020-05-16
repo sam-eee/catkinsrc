@@ -1,0 +1,904 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="jamkit_model">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0125868867332789 0.113669899807915 -0.105312222618515"
+        rpy="0 0 0" />
+      <mass
+        value="3.43325402443659" />
+      <inertia
+        ixx="0.0134874842092205"
+        ixy="3.20459845263992E-06"
+        ixz="-4.7619761290438E-05"
+        iyy="0.0080976636208784"
+        iyz="-5.31558644221171E-05"
+        izz="0.0125334295907837" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ThumbL1">
+    <inertial>
+      <origin
+        xyz="-0.0634521944115017 -0.171151845387954 0.0425644544245823"
+        rpy="0 0 0" />
+      <mass
+        value="0.0160938361133641" />
+      <inertia
+        ixx="4.06088685918226E-06"
+        ixy="4.17485356290749E-07"
+        ixz="9.73235195098429E-07"
+        iyy="3.07797296542464E-06"
+        iyz="-1.66759360188153E-06"
+        izz="2.85026746728776E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_J1_palm"
+    type="continuous">
+    <origin
+      xyz="0.0253704940670463 -0.107730311468469 -0.00564602169271088"
+      rpy="1.36904942480943 0.835713305810846 -0.290192523798073" />
+    <parent
+      link="base_link" />
+    <child
+      link="ThumbL1" />
+    <axis
+      xyz="0.0696339767603201 -0.997572608525587 0" />
+    <limit
+      lower="0"
+      upper="1.58"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ThumbL2">
+    <inertial>
+      <origin
+        xyz="0.212224656362429 0.0610034648257019 0.100783225183638"
+        rpy="0 0 0" />
+      <mass
+        value="0.0104393122392426" />
+      <inertia
+        ixx="5.08693016959234E-07"
+        ixy="-5.96987131440851E-08"
+        ixz="-8.13751557778597E-08"
+        iyy="7.6671714251033E-07"
+        iyz="-7.11841944455385E-09"
+        izz="7.74283532735877E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_J2_AA"
+    type="continuous">
+    <origin
+      xyz="0.0116011612623766 0.0714243203561624 0.0155920000826014"
+      rpy="0.26621136450295 -0.382406486230405 2.06559118209411" />
+    <parent
+      link="ThumbL1" />
+    <child
+      link="ThumbL2" />
+    <axis
+      xyz="0.533983512123466 0.752625147265207 0.38524926539101" />
+  </joint>
+  <link
+    name="ThumbL3">
+    <inertial>
+      <origin
+        xyz="0.226664410413268 0.139654797911905 -0.134484913965397"
+        rpy="0 0 0" />
+      <mass
+        value="0.00960222096680699" />
+      <inertia
+        ixx="7.92432313231978E-07"
+        ixy="-2.03198918484549E-07"
+        ixz="4.11456687638549E-07"
+        iyy="1.20875552539606E-06"
+        iyz="1.59692074920335E-07"
+        izz="9.3895104649216E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_J3_FE1"
+    type="continuous">
+    <origin
+      xyz="0.0210282508749524 -0.0219666986100594 0.0128222251300471"
+      rpy="-0.323401837524802 0.0594865698013315 0.499082256990666" />
+    <parent
+      link="ThumbL2" />
+    <child
+      link="ThumbL3" />
+    <axis
+      xyz="0.548878290339934 0.03800792096886 -0.835037735876131" />
+  </joint>
+  <link
+    name="ThumbL4_Tip">
+    <inertial>
+      <origin
+        xyz="-0.0236852401179448 -0.29849653912361 0.20677956819612"
+        rpy="0 0 0" />
+      <mass
+        value="0.00888392087443115" />
+      <inertia
+        ixx="4.05056022150744E-07"
+        ixy="6.28939284109876E-08"
+        ixz="-7.22078840132566E-09"
+        iyy="3.80046406366864E-07"
+        iyz="-6.36696721583212E-08"
+        izz="5.01241141192921E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL4_Tip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/ThumbL4_Tip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Thumb_J3_FE2"
+    type="continuous">
+    <origin
+      xyz="0.0340761679604119 -0.0128797397280206 0.0218123515851108"
+      rpy="1.83346470963881 -0.0797212817443392 2.46760407767054" />
+    <parent
+      link="ThumbL3" />
+    <child
+      link="ThumbL4_Tip" />
+    <axis
+      xyz="0.470351806777558 0.676018510829762 -0.567246111380763" />
+  </joint>
+  <link
+    name="IndexL1">
+    <inertial>
+      <origin
+        xyz="0.0631972366864129 -0.0829101031090376 -0.00398393536565592"
+        rpy="0 0 0" />
+      <mass
+        value="0.00948156663496193" />
+      <inertia
+        ixx="1.2108639585088E-06"
+        ixy="-1.36413701841388E-07"
+        ixz="4.81856259886452E-08"
+        iyy="4.92766977264363E-07"
+        iyz="2.81527263382953E-07"
+        izz="1.14848270579912E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/IndexL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/IndexL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_J1_FE"
+    type="continuous">
+    <origin
+      xyz="0.0728759784819037 -0.110053392519513 0.124865711151128"
+      rpy="2.05610648406236 -0.197122708761004 3.14020353348554" />
+    <parent
+      link="base_link" />
+    <child
+      link="IndexL1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="IndexL2">
+    <inertial>
+      <origin
+        xyz="0.136720693219606 -0.149777315985515 -0.0589831918965754"
+        rpy="0 0 0" />
+      <mass
+        value="0.00793319204268229" />
+      <inertia
+        ixx="7.59940668848812E-07"
+        ixy="-7.10700820025465E-08"
+        ixz="-1.88356972133947E-08"
+        iyy="3.55388225059571E-07"
+        iyz="-1.06887758256667E-07"
+        izz="7.66536605386225E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/IndexL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/IndexL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_J2_FE"
+    type="continuous">
+    <origin
+      xyz="-0.00475302703995798 0.0416064416256316 -0.00501005631231227"
+      rpy="0.190900346751885 0 0" />
+    <parent
+      link="IndexL1" />
+    <child
+      link="IndexL2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="IndexL3">
+    <inertial>
+      <origin
+        xyz="-0.0882372743341382 -0.0514278495126252 -0.174610354230937"
+        rpy="0 0 0" />
+      <mass
+        value="0.00673176646979381" />
+      <inertia
+        ixx="3.02147050077956E-07"
+        ixy="-2.22550993487946E-08"
+        ixz="1.31732705106688E-08"
+        iyy="2.33619642899847E-07"
+        iyz="-5.57125745642576E-09"
+        izz="2.27925331744987E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/IndexL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/IndexL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Index_J3_FE"
+    type="continuous">
+    <origin
+      xyz="0 0.020574 -0.025293"
+      rpy="-2.5534 0.27391 0.53502" />
+    <parent
+      link="IndexL2" />
+    <child
+      link="IndexL3" />
+    <axis
+      xyz="0.82819 0.29506 -0.47649" />
+  </joint>
+  <link
+    name="MiddleL1">
+    <inertial>
+      <origin
+        xyz="0.0203411230640925 -0.0290535831411617 -0.00347519126435797"
+        rpy="0 0 0" />
+      <mass
+        value="0.0106218097539514" />
+      <inertia
+        ixx="1.72457219135303E-06"
+        ixy="-1.16694544883697E-08"
+        ixz="7.77612830776384E-10"
+        iyy="4.92479740968345E-07"
+        iyz="3.4228956621749E-07"
+        izz="1.64456828351954E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/MiddleL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/MiddleL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Middle_J1_FE"
+    type="continuous">
+    <origin
+      xyz="0.0437423488509242 -0.11000514327254 0.12644792794842"
+      rpy="2.69942035733912 -0.0524037668900937 3.13989449923042" />
+    <parent
+      link="base_link" />
+    <child
+      link="MiddleL1" />
+    <axis
+      xyz="0.999999999250854 -3.34230441381843E-05 -1.95241509780389E-05" />
+    <limit
+      lower="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MiddleL2">
+    <inertial>
+      <origin
+        xyz="0.029587018565282 -0.0351885983842045 0.112321655776344"
+        rpy="0 0 0" />
+      <mass
+        value="0.0086766412959544" />
+      <inertia
+        ixx="9.65167046235499E-07"
+        ixy="-3.61429222869703E-09"
+        ixz="-4.93148283750521E-09"
+        iyy="8.46016613472243E-07"
+        iyz="-2.63915778063169E-07"
+        izz="4.77527660197059E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/MiddleL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/MiddleL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Middle_J2_FE"
+    type="continuous">
+    <origin
+      xyz="-0.0029972 0.025234 -0.041551"
+      rpy="0.31924 0 0" />
+    <parent
+      link="MiddleL1" />
+    <child
+      link="MiddleL2" />
+    <axis
+      xyz="1 -3.3423E-05 -1.9524E-05" />
+  </joint>
+  <link
+    name="MiddleL3">
+    <inertial>
+      <origin
+        xyz="-0.102649707091825 0.058315592650597 -0.178785961166025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0078982056149239" />
+      <inertia
+        ixx="3.80976891890527E-07"
+        ixy="-4.63772373654214E-08"
+        ixz="-1.0840062881351E-08"
+        iyy="3.55990013582036E-07"
+        iyz="-3.40996734028147E-09"
+        izz="2.76537874570016E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/MiddleL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.0901960784313725 0.141176470588235 0.968627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/MiddleL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Middle_J3_FE"
+    type="continuous">
+    <origin
+      xyz="0 -0.017579 -0.032514"
+      rpy="-3.0459 0.49413 0.34607" />
+    <parent
+      link="MiddleL2" />
+    <child
+      link="MiddleL3" />
+    <axis
+      xyz="0.82819 0.29506 -0.47649" />
+  </joint>
+  <link
+    name="RingL1">
+    <inertial>
+      <origin
+        xyz="0.0127600797436658 -0.0808882417024012 -0.125331001163316"
+        rpy="0 0 0" />
+      <mass
+        value="0.00928158250246035" />
+      <inertia
+        ixx="1.1591751783787E-06"
+        ixy="7.55338185751012E-08"
+        ixz="1.7638756248032E-08"
+        iyy="4.22595816902781E-07"
+        iyz="-2.06421573661319E-07"
+        izz="1.12633590363325E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/RingL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/RingL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ring_J1_FE"
+    type="continuous">
+    <origin
+      xyz="0.010851 -0.10994 0.12333"
+      rpy="0.54054 0.092892 3.1397" />
+    <parent
+      link="base_link" />
+    <child
+      link="RingL1" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="RingL2">
+    <inertial>
+      <origin
+        xyz="0.0222484766779456 -0.0656487862382041 -0.200315998761768"
+        rpy="0 0 0" />
+      <mass
+        value="0.00847709195228432" />
+      <inertia
+        ixx="9.19731427352779E-07"
+        ixy="1.6532112318815E-08"
+        ixz="1.13166578602942E-08"
+        iyy="5.11103293022281E-07"
+        iyz="-2.74228024408229E-07"
+        izz="7.63851096681118E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/RingL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.741176470588235 0.733333333333333 0.725490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/RingL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ring_J2_FE"
+    type="continuous">
+    <origin
+      xyz="-0.00423101282970504 0.0291613635308715 0.0283346162320914"
+      rpy="-0.287448254981958 0 0" />
+    <parent
+      link="RingL1" />
+    <child
+      link="RingL2" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="RingL3">
+    <inertial>
+      <origin
+        xyz="0.0199509176110624 -0.175658118856369 -0.033207216405026"
+        rpy="0 0 0" />
+      <mass
+        value="0.0074465167872348" />
+      <inertia
+        ixx="2.74832881557016E-07"
+        ixy="7.41484470589249E-10"
+        ixz="3.28290609190977E-09"
+        iyy="2.69095766290871E-07"
+        iyz="-3.92353598031502E-08"
+        izz="3.46930605178391E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/RingL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.745098039215686 0.745098039215686 0.745098039215686 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/RingL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Ring_J3_FE"
+    type="continuous">
+    <origin
+      xyz="-0.00106109890529309 0.0261399019066498 0.0248110283606132"
+      rpy="1.24183684479456 0 0" />
+    <parent
+      link="RingL2" />
+    <child
+      link="RingL3" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="LittleL1">
+    <inertial>
+      <origin
+        xyz="-0.0920680926248886 0.0150672957605158 -0.0608701167851841"
+        rpy="0 0 0" />
+      <mass
+        value="0.00806590002315579" />
+      <inertia
+        ixx="7.11314111284811E-07"
+        ixy="-1.48522163007348E-07"
+        ixz="-1.40735998135545E-07"
+        iyy="6.37559423787255E-07"
+        iyz="-1.89728317957953E-07"
+        izz="6.05535834162914E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/LittleL1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/LittleL1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Little_J1_FE"
+    type="continuous">
+    <origin
+      xyz="-0.0279454614674053 -0.109854803994473 0.113124982944162"
+      rpy="-0.683067167299937 0.171216603389238 -2.88833288836769" />
+    <parent
+      link="base_link" />
+    <child
+      link="LittleL1" />
+    <axis
+      xyz="0.9665623406842 -0.143502933987546 -0.212518586264937" />
+  </joint>
+  <link
+    name="LittleL2">
+    <inertial>
+      <origin
+        xyz="0.0366479831241025 -0.0213121831131273 0.0585044010778479"
+        rpy="0 0 0" />
+      <mass
+        value="0.00742143322863888" />
+      <inertia
+        ixx="6.60261685323867E-07"
+        ixy="8.56269808750158E-08"
+        ixz="-6.82243529376664E-09"
+        iyy="3.17270264687146E-07"
+        iyz="4.14667443854395E-08"
+        izz="6.83028204557021E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/LittleL2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/LittleL2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Little_J2_FE"
+    type="continuous">
+    <origin
+      xyz="0.00195863243073287 -0.0103854986303937 0.0319234697402389"
+      rpy="-0.34334095190958 0.0631672147791817 0.0657186339990364" />
+    <parent
+      link="LittleL1" />
+    <child
+      link="LittleL2" />
+    <axis
+      xyz="0.96656234068422 -0.143502933987541 -0.212518586264844" />
+  </joint>
+  <link
+    name="LittleL3">
+    <inertial>
+      <origin
+        xyz="-0.0973290003209458 -0.126638848048956 -0.0764420019998899"
+        rpy="0 0 0" />
+      <mass
+        value="0.0061623517041107" />
+      <inertia
+        ixx="2.15473148931386E-07"
+        ixy="8.00045591675985E-09"
+        ixz="-1.36497365620199E-08"
+        iyy="2.3411738434511E-07"
+        iyz="1.62571131096542E-08"
+        izz="2.00344938681032E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/LittleL3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jamkit_model/meshes/LittleL3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Little_J3_FE"
+    type="continuous">
+    <origin
+      xyz="0.00701734155191605 -0.0100198126120445 0.0272319953261571"
+      rpy="1.2273581075963 0.397683579310761 -0.742784944270805" />
+    <parent
+      link="LittleL2" />
+    <child
+      link="LittleL3" />
+    <axis
+      xyz="0.828185035535954 0.295063903767513 -0.476494322744549" />
+  </joint>
+</robot>
